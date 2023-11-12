@@ -232,7 +232,7 @@ ACTOR PB_PulseCannon : PB_M1Plasma
 		
 	AltFire:
 		TNT1 A 0 A_WeaponOffset(0,32)
-        TNT1 A 0 A_JumpIfInventory("PulseCannonAmmo",30,13)
+        TNT1 A 0 A_JumpIfInventory("PulseCannonAmmo",20,13)
         Goto Reload
         TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAA 0
 		TNT1 A 0 A_StopSound(6)
@@ -284,9 +284,9 @@ ACTOR PB_PulseCannon : PB_M1Plasma
 		TNT1 A 0 A_FireCustomMissile("PulseCannonSuperBall", 0, 0, 0, 0)
 		CoolAfterAltFire:
 		TNT1 A 0 PB_WeaponRecoilBasic(-1.15) //A_SetPitch(Pitch - 1.15)
-		TNT1 A 0 A_Takeinventory("PulseCannonAmmo",30)
-		TNT1 A 0 A_TakeInventory("RightPulseCannonAmmo", 30)
-		TNT1 A 0 A_TakeInventory("DoublePulseCannonAmmo", 30)
+		TNT1 A 0 A_Takeinventory("PulseCannonAmmo",20)
+		TNT1 A 0 A_TakeInventory("RightPulseCannonAmmo", 20)
+		TNT1 A 0 A_TakeInventory("DoublePulseCannonAmmo", 20)
 		
         PZCR A 1 A_ZoomFactor(0.90)
 		
@@ -689,7 +689,7 @@ ACTOR PulseCannonSuperBall
   Radius 16
   Height 16
   Damage 4
-  Speed 18
+  Speed 15
   RenderStyle Add
   Scale 0.14
   DamageType Blackhole
